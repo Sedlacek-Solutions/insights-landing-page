@@ -505,6 +505,86 @@ h3 {
   background: #151515;
 }
 
+.review-feature-links {
+  width: min(1180px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 82px 0 34px;
+}
+
+.review-feature-heading {
+  display: grid;
+  gap: 0;
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+.review-feature-heading h2 {
+  font-size: clamp(2.25rem, 4vw, 3.45rem);
+}
+
+.review-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.review-feature-card {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  min-height: 158px;
+  padding: 20px;
+  border: 1px solid #242424;
+  border-radius: 8px;
+  background: #111111;
+  color: #ffffff;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.review-feature-card:hover,
+.review-feature-card:focus-visible {
+  border-color: rgba(57, 167, 255, 0.58);
+  background: #161616;
+  transform: translateY(-2px);
+}
+
+.review-feature-card span {
+  display: grid;
+  gap: 8px;
+}
+
+.review-feature-card strong {
+  font-size: 1.08rem;
+  line-height: 1.15;
+}
+
+.review-feature-card small {
+  color: #b8b8b8;
+  font-size: 0.95rem;
+  line-height: 1.42;
+}
+
+.sf-symbol {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(57, 167, 255, 0.12);
+}
+
+.sf-symbol img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: invert(68%) sepia(66%) saturate(1486%) hue-rotate(177deg) brightness(101%) contrast(101%);
+  object-fit: contain;
+}
+
 .feature-stack {
   width: min(1500px, calc(100% - 56px));
   margin: 0 auto;
@@ -797,6 +877,10 @@ h3 {
     gap: 28px;
   }
 
+  .review-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .feature-step {
     position: static;
   }
@@ -946,9 +1030,33 @@ h3 {
   }
 
   .feature-stack,
+  .review-feature-links,
   .site-footer,
   .legal-main {
     width: calc(100% - 36px);
+  }
+
+  .review-feature-links {
+    padding: 56px 0 10px;
+  }
+
+  .review-feature-heading {
+    margin-bottom: 22px;
+  }
+
+  .review-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-feature-card {
+    grid-template-columns: 44px minmax(0, 1fr);
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .sf-symbol {
+    width: 44px;
+    height: 44px;
   }
 
   .legal-main {
