@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Metrics and filters demo placeholder</title>
+  <desc id="desc">Placeholder poster for the metrics and filters demo video.</desc>
+  <rect width="1280" height="720" fill="#101418"/>
+  <rect x="56" y="56" width="1168" height="608" rx="16" fill="#171d23" stroke="#2e3843" stroke-width="2"/>
+  <text x="96" y="88" fill="#aeb8c2" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700">Demo video</text>
+  <rect x="116" y="148" width="690" height="424" rx="14" fill="#1d232a"/>
+  <rect x="858" y="148" width="306" height="424" rx="14" fill="#222930"/>
+  <text x="156" y="220" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="800">Metrics and filters</text>
+  <rect x="164" y="448" width="74" height="72" rx="10" fill="#0877cf"/>
+  <rect x="272" y="392" width="74" height="128" rx="10" fill="#12805c"/>
+  <rect x="380" y="334" width="74" height="186" rx="10" fill="#0877cf"/>
+  <rect x="488" y="286" width="74" height="234" rx="10" fill="#12805c"/>
+  <rect x="596" y="238" width="74" height="282" rx="10" fill="#0877cf"/>
+  <rect x="902" y="218" width="90" height="48" rx="12" fill="#0877cf"/>
+  <rect x="1010" y="218" width="96" height="48" rx="12" fill="#2b333b"/>
+  <rect x="902" y="300" width="126" height="48" rx="12" fill="#2b333b"/>
+  <rect x="1044" y="300" width="78" height="48" rx="12" fill="#2b333b"/>
+  <circle cx="472" cy="358" r="64" fill="#0877cf"/>
+  <path d="M450 326 L450 390 L504 358 Z" fill="#ffffff"/>
+</svg>

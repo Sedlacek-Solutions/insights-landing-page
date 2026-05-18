@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insights for App Store Connect - Review workflows for Mac</title>
+    <meta
+      name="description"
+      content="Insights for App Store Connect is a native Mac app for Review Chat, generated responses, translations, removal requests, metrics, and filters."
+    >
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Insights for App Store Connect">
+    <meta
+      property="og:description"
+      content="A native Mac workspace for understanding App Store reviews and responding faster."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/hero-mockup.png">
+    <link rel="icon" href="assets/app-icon.png">
+    <link rel="apple-touch-icon" href="assets/app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Insights for App Store Connect",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "macOS",
+        "url": "https://apps.apple.com/app/id6745999897",
+        "image": "assets/hero-mockup.png",
+        "description": "A native Mac app for App Store Connect review workflows, Review Chat, assisted response drafting, translation, removal requests, metrics, and filters."
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Insights for App Store Connect home">
+        <img src="assets/app-icon.png" width="34" height="34" alt="">
+        <span>Insights</span>
+      </a>
+      <nav class="feature-nav" aria-label="Feature navigation">
+        <details>
+          <summary>Features</summary>
+          <div class="feature-menu">
+            <div class="feature-submenu">
+              <a class="feature-submenu-trigger" href="#features" aria-haspopup="true">Reviews</a>
+              <div class="feature-submenu-panel" aria-label="Reviews features">
+                <a href="#feature-chat">Chat</a>
+                <a href="#feature-responses">Generated responses</a>
+                <a href="#feature-translations">Translations</a>
+                <a href="#feature-filters">Filters</a>
+                <a href="#feature-metrics">Metrics</a>
+                <a href="#feature-request-removal">Request removal</a>
+              </div>
+            </div>
+          </div>
+        </details>
+      </nav>
+      <a class="header-cta" href="https://apps.apple.com/app/id6745999897" aria-label="Download on the Mac App Store">
+        <img
+          src="assets/download-on-mac-app-store.svg"
+          width="165"
+          height="40"
+          alt="Download on the Mac App Store"
+        >
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-app-icon" src="assets/app-icon.png" width="156" height="156" alt="">
+        <h1 id="hero-title">Insights</h1>
+        <p class="hero-lede">
+          Your App Store Connect workspace for Mac.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="button primary" href="https://apps.apple.com/app/id6745999897">
+            Download
+          </a>
+          <a class="button secondary" href="#features">Explore Features</a>
+        </div>
+        <section
+          class="social-proof"
+          data-social-proof
+          data-endpoint="https://insightsserver-s89wk.ondigitalocean.app/v1/social-proof"
+          aria-label="Customer social proof"
+          hidden
+        >
+          <p class="social-proof-copy" data-social-proof-copy></p>
+          <div class="social-proof-marquee" data-social-proof-rows aria-hidden="true"></div>
+        </section>
+      </section>
+
+      <section id="features" class="feature-stack" aria-label="Feature highlights">
+        <div class="feature-tour" data-active-feature="overview">
+          <div class="feature-steps" aria-label="Feature descriptions">
+            <article
+              class="feature-step feature-overview is-active"
+              data-feature="overview"
+              data-spot-x="0%"
+              data-spot-y="0%"
+              data-spot-w="100%"
+              data-spot-h="100%"
+            >
+              <p class="section-kicker">Features</p>
+              <h2>The complete customer reviews workspace.</h2>
+              <p>
+                See Chat, response drafting, translations, and filters in one focused
+                App Store Connect workflow. Scroll to spotlight each part of the same workspace.
+              </p>
+              <figure class="feature-inline-media is-overview">
+                <img
+                  src="assets/feature-response-workflow.png"
+                  width="1275"
+                  height="755"
+                  alt="Insights customer reviews workspace."
+                >
+              </figure>
+            </article>
+
+            <article
+              id="feature-chat"
+              class="feature-step"
+              data-feature="chat"
+              data-spot-x="0.4%"
+              data-spot-y="0%"
+              data-spot-w="28.4%"
+              data-spot-h="100%"
+            >
+              <p class="section-kicker">Chat</p>
+              <h3>Ask questions across customer feedback.</h3>
+              <p>
+                Chat turns your customer reviews into answers about what users love,
+                recurring complaints, sentiment changes, and feature requests.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 0.4%; --inline-spot-y: 0%; --inline-spot-w: 28.4%; --inline-spot-h: 100%;"
+              >
+                <img class="inline-base" src="assets/feature-response-workflow.png" width="1275" height="755" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-response-workflow.png"
+                  width="1275"
+                  height="755"
+                  alt="Insights Review Chat sidebar highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-responses"
+              class="feature-step"
+              data-feature="responses"
+              data-spot-x="29.8%"
+              data-spot-y="7.9%"
+              data-spot-w="40.6%"
+              data-spot-h="30.9%"
+            >
+              <p class="section-kicker">Generated responses</p>
+              <h3>Draft replies from the selected review.</h3>
+              <p>
+                Generate a response in context, adjust the tone and length, then send it without
+                losing sight of the review, rating, version, or territory.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 29.8%; --inline-spot-y: 7.9%; --inline-spot-w: 40.6%; --inline-spot-h: 30.9%;"
+              >
+                <img class="inline-base" src="assets/feature-response-workflow.png" width="1275" height="755" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-response-workflow.png"
+                  width="1275"
+                  height="755"
+                  alt="Insights generated response area highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-translations"
+              class="feature-step"
+              data-feature="translations"
+              data-spot-x="29.8%"
+              data-spot-y="40.3%"
+              data-spot-w="40.6%"
+              data-spot-h="53%"
+            >
+              <p class="section-kicker">Translations</p>
+              <h3>Read and reply across languages.</h3>
+              <p>
+                Keep the original text nearby while viewing translated reviews and translated
+                response previews for international feedback.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 29.8%; --inline-spot-y: 40.3%; --inline-spot-w: 40.6%; --inline-spot-h: 53%;"
+              >
+                <img class="inline-base" src="assets/feature-response-workflow.png" width="1275" height="755" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-response-workflow.png"
+                  width="1275"
+                  height="755"
+                  alt="Insights translation area highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-filters"
+              class="feature-step"
+              data-feature="filters"
+              data-spot-x="72.7%"
+              data-spot-y="0%"
+              data-spot-w="26.9%"
+              data-spot-h="100%"
+            >
+              <p class="section-kicker">Filters</p>
+              <h3>Focus by version, territory, rating, and status.</h3>
+              <p>
+                Narrow the workspace to the reviews that matter, then pair the filtered list with
+                the response and chat workflows beside it.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 72.7%; --inline-spot-y: 0%; --inline-spot-w: 26.9%; --inline-spot-h: 100%;"
+              >
+                <img class="inline-base" src="assets/feature-response-workflow.png" width="1275" height="755" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-response-workflow.png"
+                  width="1275"
+                  height="755"
+                  alt="Insights filters panel highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-metrics"
+              class="feature-step"
+              data-feature="metrics"
+              data-image="assets/feature-workspace-metrics.png"
+              data-spot-x="29.4%"
+              data-spot-y="0%"
+              data-spot-w="43.7%"
+              data-spot-h="100%"
+            >
+              <p class="section-kicker">Metrics</p>
+              <h3>Track rating patterns and review volume.</h3>
+              <p>
+                Switch into metrics to see rating trends, review volume, and distribution in the
+                same filtered workspace.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 29.4%; --inline-spot-y: 0%; --inline-spot-w: 43.7%; --inline-spot-h: 100%;"
+              >
+                <img class="inline-base" src="assets/feature-workspace-metrics.png" width="1277" height="758" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-workspace-metrics.png"
+                  width="1277"
+                  height="758"
+                  alt="Insights review metrics panel highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-request-removal"
+              class="feature-step"
+              data-feature="request-removal"
+              data-image="assets/feature-workspace-request-removal.png"
+              data-spot-x="30.4%"
+              data-spot-y="17%"
+              data-spot-w="39%"
+              data-spot-h="65.3%"
+            >
+              <p class="section-kicker">Request removal</p>
+              <h3>Prepare Apple-facing removal requests.</h3>
+              <p>
+                When a review should be escalated, collect the review details and draft a concise
+                request for App Store review moderation.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 30.4%; --inline-spot-y: 17%; --inline-spot-w: 39%; --inline-spot-h: 65.3%;"
+              >
+                <img class="inline-base" src="assets/feature-workspace-request-removal.png" width="1277" height="758" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-workspace-request-removal.png"
+                  width="1277"
+                  height="758"
+                  alt="Insights request removal modal highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+          </div>
+
+          <figure class="tour-media">
+            <img
+              class="tour-base"
+              src="assets/feature-response-workflow.png"
+              width="1275"
+              height="755"
+              alt=""
+            >
+            <img
+              class="tour-clear"
+              src="assets/feature-response-workflow.png"
+              width="1275"
+              height="755"
+              alt="Insights customer reviews workspace with an animated highlight."
+            >
+            <span class="tour-ring" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Insights for App Store Connect</strong>
+        <p>A Mac workspace for App Store Connect.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="https://raw.githubusercontent.com/Sedlacek-Solutions/Insights-Public/main/PrivacyPolicy.md">Privacy</a>
+        <a href="https://raw.githubusercontent.com/Sedlacek-Solutions/Insights-Public/main/TermsOfService.md">Terms</a>
+        <a href="mailto:Support@SedlacekSolutions.com">Support@SedlacekSolutions.com</a>
+      </nav>
+    </footer>
+    <script type="application/json" id="social-proof-fallback">
+      {
+        "totalUsers": 4,
+        "totalApps": 26,
+        "appIconURLs": [
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8d/42/06/8d420697-1d12-9099-c2df-9a9a3e9ce309/boltIcon60x60@2x.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ff/f2/6e/fff26ed7-a261-dec7-e796-86b68e9766b0/AppIcon60x60@2x.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/0d/97/990d97f4-343d-02a1-ebad-24da709f7845/AppIcon76x76@2x_U007eipad.png/152x152bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4a/16/26/4a1626ae-a89d-b380-1876-69f268c24fbd/icon76x76@2x_U007eipad.png/152x152bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ba/f5/2a/baf52a69-c4aa-cad8-eac4-b4314d9aaa71/icon60x60@2x.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3a/7e/49/3a7e49aa-5573-5bdd-afe8-eab51330de17/icon76x76@2x_U007eipad.png/152x152bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/7f/1e/3c/7f1e3c90-0639-4c1c-23e6-68087237b6bf/Icon-60@2x.png.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/76/62/c6/7662c66c-7dcf-2265-ef10-31332a8ba512/AppIcon60x60@2x.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/af/67/53/af67538d-4cc1-5f3c-4b4d-777415c7c8f9/icon76x76@2x_U007eipad.png/152x152bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/43/3b/c9/433bc900-9bdd-cf06-9bb0-f489303ff91f/AppIcon60x60@2x.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/3d/ac/61/3dac613f-deb1-0755-eb71-f469c58c59e3/AppIcon60x60@2x.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/93/ca/88/93ca8823-8866-a691-bb23-b3442d988a43/Icon-60@2x.png.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/3c/9b/03/3c9b0363-96db-6402-d460-8c9e7b05a32e/AppIcon60x60@2x.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/24/43/71/24437115-0a52-3957-b68b-294ffda38add/Icon60x60@2x.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/72/c1/43/72c14337-ca47-188e-57e6-8191daf41440/AppIcon.icns/256x256bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/e5/96/49/e5964904-f10f-0679-c95c-038a174c94b6/Icon-60@2x.png.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/6e/64/d0/6e64d0bb-8c83-bf67-8e39-f8770998fc47/Icon-60@2x.png.png/120x120bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/f9/cc/c1/f9ccc1ec-a52f-bc64-7cae-b5c2aa406795/AppIcon-2x_U007epad-0-8-0-85-220.png/167x167bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/1c/fb/28/1cfb2817-4ffe-2332-8556-be5bcdf81512/AppIcon-2x_U007epad-0-8-0-85-220.png/167x167bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/8c/a4/27/8ca42754-f9ba-3e80-7e4a-309eae899c7f/AppIcon-2x_U007epad-0-5-0-85-220.png/167x167bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/6b/3d/64/6b3d64d2-b03e-90d0-13bf-b37d502224be/AppIcon-2x_U007epad-0-5-0-85-220.png/167x167bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/95/c1/14/95c114ae-1ab0-4d88-945a-6ab0eeb0eb75/AppIcon-2x_U007epad-0-5-0-sRGB-85-220.png/167x167bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/eb/8f/67/eb8f6703-c049-3578-33c0-0c0f7e7607ac/AppIcon76x76@2x_U007eipad.png/152x152bb.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e5/b7/0b/e5b70b37-7ff1-0c9b-b3bb-7bf6e5e18e24/AppIcon60x60@2x.png/120x120bb.png"
+        ]
+      }
+    </script>
+    <script>
+      const socialProofRoot = document.querySelector("[data-social-proof]");
+      const socialProofCopy = socialProofRoot?.querySelector("[data-social-proof-copy]");
+      const socialProofRows = socialProofRoot?.querySelector("[data-social-proof-rows]");
+      const socialProofFallback = document.getElementById("social-proof-fallback");
+      const socialProofFormatter = new Intl.NumberFormat("en-US");
+
+      const pluralize = (count, singular, plural = `${singular}s`) => {
+        return count === 1 ? singular : plural;
+      };
+
+      const parseFallbackSocialProof = () => {
+        if (!socialProofFallback?.textContent) {
+          return null;
+        }
+
+        try {
+          return JSON.parse(socialProofFallback.textContent);
+        } catch {
+          return null;
+        }
+      };
+
+      const normalizeSocialProof = (socialProof) => {
+        const totalUsers = Number(socialProof?.totalUsers);
+        const totalApps = Number(socialProof?.totalApps);
+        const appIconURLs = Array.isArray(socialProof?.appIconURLs)
+          ? socialProof.appIconURLs.filter((value) => {
+              try {
+                return Boolean(new URL(value));
+              } catch {
+                return false;
+              }
+            })
+          : [];
+
+        if (
+          Number.isFinite(totalUsers) === false ||
+          Number.isFinite(totalApps) === false ||
+          appIconURLs.length === 0
+        ) {
+          return null;
+        }
+
+        return {
+          totalUsers,
+          totalApps,
+          appIconURLs,
+        };
+      };
+
+      const fetchSocialProof = async () => {
+        if (!socialProofRoot?.dataset.endpoint) {
+          return normalizeSocialProof(parseFallbackSocialProof());
+        }
+
+        try {
+          const response = await fetch(socialProofRoot.dataset.endpoint, {
+            headers: {
+              Accept: "application/json",
+            },
+            cache: "no-store",
+          });
+
+          if (response.ok) {
+            const liveSocialProof = normalizeSocialProof(await response.json());
+            if (liveSocialProof) {
+              return liveSocialProof;
+            }
+          }
+        } catch {
+          // Static hosts need backend CORS for the live endpoint; use the embedded snapshot.
+        }
+
+        return normalizeSocialProof(parseFallbackSocialProof());
+      };
+
+      const rotateIcons = (icons, offset) => {
+        if (icons.length === 0) {
+          return [];
+        }
+        const index = offset % icons.length;
+        return icons.slice(index).concat(icons.slice(0, index));
+      };
+
+      const expandedIcons = (icons, minimumCount) => {
+        const result = [];
+        while (result.length < minimumCount) {
+          result.push(...icons);
+        }
+        return result;
+      };
+
+      const makeIconImage = (url) => {
+        const image = document.createElement("img");
+        image.className = "social-proof-icon";
+        image.src = url;
+        image.alt = "";
+        image.loading = "lazy";
+        image.decoding = "async";
+        image.referrerPolicy = "no-referrer";
+        return image;
+      };
+
+      const makeMarqueeSegment = (icons) => {
+        const segment = document.createElement("div");
+        segment.className = "social-proof-segment";
+        icons.forEach((icon) => segment.append(makeIconImage(icon)));
+        return segment;
+      };
+
+      const renderSocialProof = (socialProof) => {
+        if (!socialProofRoot || !socialProofCopy || !socialProofRows || !socialProof) {
+          return;
+        }
+
+        socialProofCopy.textContent = `Trusted by ${socialProofFormatter.format(
+          socialProof.totalUsers
+        )} ${pluralize(socialProof.totalUsers, "developer")} managing ${socialProofFormatter.format(
+          socialProof.totalApps
+        )} ${pluralize(socialProof.totalApps, "app")}.`;
+
+        socialProofRows.replaceChildren();
+
+        [
+          { direction: "left", duration: "150s", offset: 0 },
+          { direction: "right", duration: "180s", offset: 7 },
+        ].forEach((row) => {
+          const icons = expandedIcons(rotateIcons(socialProof.appIconURLs, row.offset), 44);
+          const marqueeRow = document.createElement("div");
+          const track = document.createElement("div");
+          marqueeRow.className = "social-proof-row";
+          marqueeRow.dataset.direction = row.direction;
+          marqueeRow.style.setProperty("--duration", row.duration);
+          track.className = "social-proof-track";
+          track.append(makeMarqueeSegment(icons), makeMarqueeSegment(icons));
+          marqueeRow.append(track);
+          socialProofRows.append(marqueeRow);
+        });
+
+        socialProofRoot.hidden = false;
+      };
+
+      fetchSocialProof().then(renderSocialProof);
+
+      const tour = document.querySelector(".feature-tour");
+      const steps = document.querySelectorAll(".feature-step");
+      const tourImages = document.querySelectorAll(".tour-media img");
+      const defaultTourImage = "assets/feature-response-workflow.png";
+
+      if (tour && steps.length > 0) {
+        const activateStep = (step) => {
+          const imageSource = step.dataset.image || defaultTourImage;
+          tour.dataset.activeFeature = step.dataset.feature;
+          tour.style.setProperty("--spot-x", step.dataset.spotX);
+          tour.style.setProperty("--spot-y", step.dataset.spotY);
+          tour.style.setProperty("--spot-w", step.dataset.spotW);
+          tour.style.setProperty("--spot-h", step.dataset.spotH);
+
+          tourImages.forEach((image) => {
+            if (!image.getAttribute("src").endsWith(imageSource)) {
+              image.src = imageSource;
+            }
+          });
+
+          steps.forEach((candidate) => {
+            candidate.classList.toggle("is-active", candidate === step);
+          });
+        };
+
+        activateStep(steps[0]);
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries
+              .filter((entry) => entry.isIntersecting)
+              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+            if (visible) {
+              activateStep(visible.target);
+            }
+          },
+          {
+            rootMargin: "-28% 0px -42% 0px",
+            threshold: [0.2, 0.45, 0.7],
+          }
+        );
+
+        steps.forEach((step) => observer.observe(step));
+      }
+    </script>
+  </body>
+</html>
