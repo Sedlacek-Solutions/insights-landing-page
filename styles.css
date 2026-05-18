@@ -115,12 +115,16 @@ img {
 }
 
 .feature-nav details[open] summary,
+.feature-nav details:hover summary,
+.feature-nav details:focus-within summary,
 .feature-nav summary:hover {
   background: rgba(255, 255, 255, 0.14);
   color: #ffffff;
 }
 
-.feature-nav details[open] summary::after {
+.feature-nav details[open] summary::after,
+.feature-nav details:hover summary::after,
+.feature-nav details:focus-within summary::after {
   transform: translateY(2px) rotate(225deg);
 }
 
@@ -152,15 +156,22 @@ img {
   transform: translateX(-50%) translateY(2px);
 }
 
-.feature-menu a {
+.feature-menu a,
+.feature-submenu-trigger {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  width: 100%;
   padding: 10px 12px;
+  border: 0;
   border-radius: 8px;
+  background: transparent;
   color: rgba(255, 255, 255, 0.78);
+  font: inherit;
+  text-align: left;
   white-space: nowrap;
+  cursor: pointer;
   transition:
     background-color 160ms ease,
     color 160ms ease;
@@ -182,10 +193,10 @@ img {
 .feature-submenu-panel {
   position: absolute;
   top: -8px;
-  left: calc(100% + 10px);
+  left: 100%;
   display: grid;
   min-width: 230px;
-  padding: 8px;
+  padding: 8px 8px 8px 18px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 12px;
   background: rgba(16, 16, 18, 0.94);
@@ -206,7 +217,9 @@ img {
 }
 
 .feature-menu a:hover,
-.feature-menu a:focus-visible {
+.feature-menu a:focus-visible,
+.feature-submenu-trigger:hover,
+.feature-submenu-trigger:focus-visible {
   background: rgba(255, 255, 255, 0.12);
   color: #ffffff;
 }
@@ -575,7 +588,7 @@ h3 {
 }
 
 .tour-base {
-  filter: blur(6px) saturate(0.55) brightness(0.35);
+  filter: blur(3.5px) saturate(0.58) brightness(0.38);
   transform: scale(1.015);
 }
 
@@ -639,7 +652,7 @@ h3 {
 }
 
 .inline-base {
-  filter: blur(5px) saturate(0.56) brightness(0.36);
+  filter: blur(3px) saturate(0.58) brightness(0.39);
   transform: scale(1.012);
 }
 
@@ -776,6 +789,24 @@ h3 {
     transform: none;
   }
 
+  .feature-submenu-panel {
+    position: static;
+    min-width: 0;
+    margin-top: 4px;
+    padding: 4px 0 0 12px;
+    border: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .feature-submenu:hover .feature-submenu-panel,
+  .feature-submenu:focus-within .feature-submenu-panel {
+    transform: none;
+  }
+
   .feature-nav details[open] .feature-menu,
   .feature-nav details:hover .feature-menu,
   .feature-nav details:focus-within .feature-menu {
@@ -874,7 +905,7 @@ h3 {
   }
 
   .tour-base {
-    filter: blur(5px) saturate(0.62) brightness(0.42);
+    filter: blur(2.5px) saturate(0.62) brightness(0.42);
   }
 
   .site-footer nav {
