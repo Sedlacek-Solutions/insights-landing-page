@@ -76,6 +76,9 @@ img {
 .feature-nav {
   position: absolute;
   left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   transform: translateX(-50%);
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.96rem;
@@ -86,7 +89,8 @@ img {
   position: relative;
 }
 
-.feature-nav summary {
+.feature-nav summary,
+.nav-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -117,7 +121,9 @@ img {
 .feature-nav details[open] summary,
 .feature-nav details:hover summary,
 .feature-nav details:focus-within summary,
-.feature-nav summary:hover {
+.feature-nav summary:hover,
+.nav-link:hover,
+.nav-link:focus-visible {
   background: rgba(255, 255, 255, 0.14);
   color: #ffffff;
 }
@@ -761,6 +767,148 @@ h3 {
   pointer-events: none;
 }
 
+.pricing-section {
+  width: min(1180px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 10px 0 118px;
+}
+
+.pricing-heading {
+  display: grid;
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+.pricing-heading h2 {
+  font-size: clamp(2.25rem, 4vw, 3.45rem);
+}
+
+.pricing-heading p {
+  max-width: 660px;
+  color: #b8b8b8;
+  font-size: 1.08rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pricing-plan {
+  display: grid;
+  gap: 28px;
+  align-content: start;
+  min-height: 230px;
+  padding: 28px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  background: #111111;
+}
+
+.pricing-plan-free {
+  border-color: rgba(52, 199, 89, 0.42);
+  background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), #111111 50%);
+}
+
+.pricing-plan-pro {
+  border-color: rgba(57, 167, 255, 0.48);
+  background: linear-gradient(135deg, rgba(57, 167, 255, 0.14), #111111 52%);
+}
+
+.pricing-plan-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.pricing-plan h3 {
+  margin-bottom: 6px;
+  font-size: 1.55rem;
+}
+
+.pricing-plan-header p {
+  margin: 0;
+  color: #b8b8b8;
+  font-size: 1rem;
+}
+
+.pricing-badge {
+  flex: 0 0 auto;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 0.96rem;
+  font-weight: 800;
+}
+
+.pricing-plan-pro .pricing-badge {
+  background: rgba(57, 167, 255, 0.14);
+  color: #39a7ff;
+}
+
+.pricing-credit-count {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+}
+
+.pricing-credit-count strong {
+  color: #ffffff;
+  font-size: 3.1rem;
+  line-height: 0.9;
+}
+
+.pricing-credit-count span {
+  color: #b8b8b8;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.faq-section {
+  width: min(1180px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 0 0 118px;
+}
+
+.faq-heading {
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+.faq-heading h2 {
+  font-size: clamp(2.25rem, 4vw, 3.45rem);
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.faq-item {
+  min-height: 170px;
+  padding: 24px;
+  border: 1px solid #242424;
+  border-radius: 8px;
+  background: #111111;
+}
+
+.faq-item h3 {
+  margin-bottom: 12px;
+  font-size: 1.18rem;
+}
+
+.faq-item p {
+  max-width: 520px;
+  margin: 0;
+  color: #b8b8b8;
+  font-size: 1rem;
+}
+
 .legal-page .site-header {
   position: static;
   background: #000000;
@@ -1031,6 +1179,8 @@ h3 {
 
   .feature-stack,
   .review-feature-links,
+  .pricing-section,
+  .faq-section,
   .site-footer,
   .legal-main {
     width: calc(100% - 36px);
@@ -1057,6 +1207,40 @@ h3 {
   .sf-symbol {
     width: 44px;
     height: 44px;
+  }
+
+  .pricing-section {
+    padding: 0 0 74px;
+  }
+
+  .faq-section {
+    padding: 0 0 74px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-item {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .pricing-plan {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .pricing-plan-header {
+    align-items: start;
+  }
+
+  .pricing-credit-count strong {
+    font-size: 2.65rem;
   }
 
   .legal-main {
