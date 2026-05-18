@@ -988,6 +988,14 @@ h3 {
   margin: 4px 0 0;
 }
 
+.footer-disclaimer {
+  max-width: 680px;
+  margin-top: 18px;
+  color: #6f6f6f;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
 .site-footer nav {
   flex-wrap: wrap;
   justify-content: flex-end;
