@@ -796,9 +796,10 @@ h3 {
 }
 
 .pricing-plan {
+  position: relative;
   display: grid;
   gap: 28px;
-  align-content: start;
+  grid-template-rows: auto 1fr;
   min-height: 230px;
   padding: 28px;
   border: 1px solid #2a2a2a;
@@ -817,24 +818,28 @@ h3 {
 }
 
 .pricing-plan-header {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 18px;
+  display: block;
+}
+
+.pricing-plan-header > div {
+  display: block;
 }
 
 .pricing-plan h3 {
-  margin-bottom: 6px;
+  margin-bottom: 0;
   font-size: 1.55rem;
 }
 
 .pricing-plan-header p {
-  margin: 0;
+  margin: 8px 0 0;
   color: #b8b8b8;
   font-size: 1rem;
 }
 
 .pricing-badge {
+  position: absolute;
+  top: 28px;
+  right: 28px;
   flex: 0 0 auto;
   padding: 6px 13px;
   border-radius: 999px;
@@ -852,6 +857,7 @@ h3 {
 .pricing-credit-count {
   display: flex;
   align-items: baseline;
+  align-self: end;
   gap: 10px;
   margin: 0;
 }
@@ -1071,6 +1077,10 @@ h3 {
     display: none;
   }
 
+  .header-cta {
+    display: none;
+  }
+
   .feature-nav {
     font-size: 0.88rem;
   }
@@ -1109,10 +1119,6 @@ h3 {
   .feature-nav details:hover .feature-menu,
   .feature-nav details:focus-within .feature-menu {
     transform: translateY(2px);
-  }
-
-  .header-cta {
-    min-height: 40px;
   }
 
   .hero {
@@ -1243,8 +1249,9 @@ h3 {
     padding: 22px;
   }
 
-  .pricing-plan-header {
-    align-items: start;
+  .pricing-badge {
+    top: 22px;
+    right: 22px;
   }
 
   .pricing-credit-count strong {

@@ -531,6 +531,7 @@
       const socialProofRows = socialProofRoot?.querySelector("[data-social-proof-rows]");
       const socialProofFallback = document.getElementById("social-proof-fallback");
       const socialProofFormatter = new Intl.NumberFormat("en-US");
+      const socialProofDeveloperThreshold = 10;
 
       const pluralize = (count, singular, plural = `${singular}s`) => {
         return count === 1 ? singular : plural;
@@ -552,7 +553,7 @@
         const totalUsers = Number(socialProof?.totalUsers);
         const totalApps = Number(socialProof?.totalApps);
         const appIconURLs = Array.isArray(socialProof?.appIconURLs)
-          ? socialProof.appIconURLs.filter((value) => {
+          ? [...new Set(socialProof.appIconURLs)].filter((value) => {
               try {
                 return Boolean(new URL(value));
               } catch {
@@ -618,6 +619,16 @@
         return result;
       };
 
+      const splitIconRows = (icons) => {
+        return icons.reduce(
+          (rows, icon, index) => {
+            rows[index % 2].push(icon);
+            return rows;
+          },
+          [[], []]
+        );
+      };
+
       const makeIconImage = (url) => {
         const image = document.createElement("img");
         image.className = "social-proof-icon";
@@ -641,19 +652,33 @@
           return;
         }
 
-        socialProofCopy.textContent = `Trusted by ${socialProofFormatter.format(
-          socialProof.totalUsers
-        )} ${pluralize(socialProof.totalUsers, "developer")} managing ${socialProofFormatter.format(
-          socialProof.totalApps
-        )} ${pluralize(socialProof.totalApps, "app")}.`;
+        const isBelowDeveloperThreshold =
+          socialProof.totalUsers < socialProofDeveloperThreshold;
+
+        socialProofCopy.textContent = isBelowDeveloperThreshold
+          ? `Managing ${socialProofFormatter.format(socialProof.totalApps)} ${pluralize(
+              socialProof.totalApps,
+              "app"
+            )} with Insights.`
+          : `Trusted by ${socialProofFormatter.format(
+              socialProof.totalUsers
+            )} ${pluralize(socialProof.totalUsers, "developer")} managing ${socialProofFormatter.format(
+              socialProof.totalApps
+            )} ${pluralize(socialProof.totalApps, "app")}.`;
 
         socialProofRows.replaceChildren();
 
-        [
-          { direction: "left", duration: "150s", offset: 0 },
-          { direction: "right", duration: "180s", offset: 7 },
-        ].forEach((row) => {
-          const icons = expandedIcons(rotateIcons(socialProof.appIconURLs, row.offset), 44);
+        const iconRows = isBelowDeveloperThreshold
+          ? [socialProof.appIconURLs]
+          : splitIconRows(socialProof.appIconURLs).filter((icons) => icons.length > 0);
+
+        iconRows.forEach((rowIcons, index) => {
+          const row = {
+            direction: index % 2 === 0 ? "left" : "right",
+            duration: index % 2 === 0 ? "150s" : "180s",
+            offset: index * 7,
+          };
+          const icons = expandedIcons(rotateIcons(rowIcons, row.offset), 44);
           const marqueeRow = document.createElement("div");
           const track = document.createElement("div");
           marqueeRow.className = "social-proof-row";
