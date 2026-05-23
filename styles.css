@@ -8,6 +8,7 @@
   --subtle: #777777;
   --line: #2a2a2a;
   --blue: #39a7ff;
+  --header-offset: 112px;
 }
 
 * {
@@ -39,7 +40,7 @@ img {
 }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -51,6 +52,19 @@ img {
   min-height: 88px;
   padding: 24px 56px;
   color: #080808;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.site-header.is-scrolled {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.78);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
 }
 
 .brand,
@@ -595,6 +609,7 @@ h3 {
   width: min(1500px, calc(100% - 56px));
   margin: 0 auto;
   padding: 88px 0 128px;
+  scroll-margin-top: var(--header-offset);
 }
 
 .feature-step p {
@@ -620,7 +635,7 @@ h3 {
 }
 
 .feature-step {
-  scroll-margin-top: 42px;
+  scroll-margin-top: var(--header-offset);
   min-height: 72vh;
   padding: 10vh 0;
   opacity: 0.48;
@@ -771,6 +786,7 @@ h3 {
   width: min(1180px, calc(100% - 56px));
   margin: 0 auto;
   padding: 10px 0 118px;
+  scroll-margin-top: var(--header-offset);
 }
 
 .pricing-heading {
@@ -878,6 +894,7 @@ h3 {
   width: min(1180px, calc(100% - 56px));
   margin: 0 auto;
   padding: 0 0 118px;
+  scroll-margin-top: var(--header-offset);
 }
 
 .faq-heading {
@@ -918,6 +935,9 @@ h3 {
 .legal-page .site-header {
   position: static;
   background: #000000;
+  border-bottom-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .legal-main {
@@ -1064,6 +1084,10 @@ h3 {
 }
 
 @media (max-width: 760px) {
+  :root {
+    --header-offset: 88px;
+  }
+
   .site-header {
     min-height: 64px;
     padding: 12px 18px;

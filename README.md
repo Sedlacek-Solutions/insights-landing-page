@@ -9,6 +9,7 @@ Open `index.html` in a browser. There is no framework, package manager, build st
 ## Publish Notes
 
 - Primary CTA: `https://apps.apple.com/app/id6745999897`
+- App Store listing copy: `app-store-listing.md`
 - App icon asset: `assets/app-icon.png`
 - Hero mockup asset: `assets/hero-mockup.png`
 - Feature screenshot: `assets/feature-response-workflow.png`
