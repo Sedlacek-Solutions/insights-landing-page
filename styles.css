@@ -807,6 +807,7 @@ h3 {
 
 .tour-media,
 .feature-inline-media {
+  cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
 
