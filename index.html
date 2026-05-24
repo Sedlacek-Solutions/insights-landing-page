@@ -535,6 +535,20 @@
 
     </main>
 
+    <div class="image-lightbox" role="dialog" aria-modal="true" aria-labelledby="image-lightbox-title" hidden>
+      <div class="image-lightbox-backdrop" data-lightbox-close></div>
+      <div class="image-lightbox-panel">
+        <div class="image-lightbox-toolbar">
+          <h2 id="image-lightbox-title">Expanded image</h2>
+          <button class="image-lightbox-close" type="button" data-lightbox-close aria-label="Close expanded image">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="image-lightbox-stage"></div>
+        <p class="image-lightbox-caption"></p>
+      </div>
+    </div>
+
     <footer class="site-footer">
       <div>
         <strong>Insights for App Store Connect</strong>
@@ -624,6 +638,7 @@
       if (solutionsMenu) {
         const solutionsMenuTrigger = solutionsMenu.querySelector("summary");
         const solutionsMenuPanel = solutionsMenu.querySelector(".feature-menu");
+        const canHoverSolutionsMenu = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
         let solutionsMenuCloseTimer;
         const openSolutionsMenu = () => {
           window.clearTimeout(solutionsMenuCloseTimer);
@@ -636,12 +651,16 @@
           solutionsMenuCloseTimer = window.setTimeout(closeSolutionsMenu, 120);
         };
 
-        solutionsMenu.addEventListener("pointerenter", openSolutionsMenu);
-        solutionsMenu.addEventListener("pointerleave", scheduleSolutionsMenuClose);
-        solutionsMenu.addEventListener("mouseenter", openSolutionsMenu);
-        solutionsMenu.addEventListener("mouseleave", scheduleSolutionsMenuClose);
-        solutionsMenuTrigger?.addEventListener("pointerover", openSolutionsMenu);
-        solutionsMenuTrigger?.addEventListener("mouseover", openSolutionsMenu);
+        if (canHoverSolutionsMenu) {
+          solutionsMenu.addEventListener("pointerenter", openSolutionsMenu);
+          solutionsMenu.addEventListener("pointerleave", scheduleSolutionsMenuClose);
+          solutionsMenu.addEventListener("mouseenter", openSolutionsMenu);
+          solutionsMenu.addEventListener("mouseleave", scheduleSolutionsMenuClose);
+          solutionsMenuTrigger?.addEventListener("pointerover", openSolutionsMenu);
+          solutionsMenuTrigger?.addEventListener("mouseover", openSolutionsMenu);
+          solutionsMenuPanel?.addEventListener("pointerenter", openSolutionsMenu);
+          solutionsMenuPanel?.addEventListener("mouseenter", openSolutionsMenu);
+        }
         solutionsMenuTrigger?.addEventListener("click", (event) => {
           event.preventDefault();
           if (solutionsMenu.classList.contains("is-open")) {
@@ -650,9 +669,6 @@
             openSolutionsMenu();
           }
         });
-        solutionsMenuPanel?.addEventListener("pointerenter", openSolutionsMenu);
-        solutionsMenuPanel?.addEventListener("mouseenter", openSolutionsMenu);
-        solutionsMenu.addEventListener("focusin", openSolutionsMenu);
         solutionsMenu.addEventListener("focusout", () => {
           window.setTimeout(() => {
             if (!solutionsMenu.contains(document.activeElement)) {
@@ -885,6 +901,138 @@
 
         steps.forEach((step) => observer.observe(step));
       }
+
+      const imageLightbox = document.querySelector(".image-lightbox");
+      const imageLightboxStage = imageLightbox?.querySelector(".image-lightbox-stage");
+      const imageLightboxTitle = imageLightbox?.querySelector("#image-lightbox-title");
+      const imageLightboxCaption = imageLightbox?.querySelector(".image-lightbox-caption");
+      const imageLightboxClose = imageLightbox?.querySelector(".image-lightbox-close");
+      let imageLightboxTrigger = null;
+
+      const expandableImages = document.querySelectorAll(".tour-media, .feature-inline-media");
+      const getExpandableImage = (container) => {
+        return (
+          container.querySelector(".tour-clear") ||
+          container.querySelector(".inline-clear") ||
+          container.querySelector("img:not([alt=''])") ||
+          container.querySelector("img")
+        );
+      };
+
+      const closeImageLightbox = () => {
+        if (!imageLightbox || imageLightbox.hidden) {
+          return;
+        }
+
+        imageLightbox.hidden = true;
+        document.body.classList.remove("has-image-lightbox");
+        imageLightboxStage?.replaceChildren();
+        imageLightboxTrigger?.focus();
+        imageLightboxTrigger = null;
+      };
+
+      const getHighlightVariables = (container) => {
+        const style = getComputedStyle(container);
+        return {
+          x: style.getPropertyValue("--spot-x") || style.getPropertyValue("--inline-spot-x") || "0%",
+          y: style.getPropertyValue("--spot-y") || style.getPropertyValue("--inline-spot-y") || "0%",
+          w: style.getPropertyValue("--spot-w") || style.getPropertyValue("--inline-spot-w") || "100%",
+          h: style.getPropertyValue("--spot-h") || style.getPropertyValue("--inline-spot-h") || "100%",
+        };
+      };
+
+      const buildExpandedImage = (container, image, altText) => {
+        if (!imageLightboxStage) {
+          return;
+        }
+
+        const source = image.currentSrc || image.src;
+        const hasHighlight = Boolean(
+          container.querySelector(".tour-clear, .inline-clear") &&
+            container.querySelector(".tour-ring, .inline-ring")
+        );
+
+        imageLightboxStage.replaceChildren();
+
+        if (!hasHighlight) {
+          const expandedImage = new Image();
+          expandedImage.src = source;
+          expandedImage.alt = altText;
+          imageLightboxStage.append(expandedImage);
+          return;
+        }
+
+        const highlight = getHighlightVariables(container);
+        imageLightboxStage.style.setProperty("--expanded-spot-x", highlight.x);
+        imageLightboxStage.style.setProperty("--expanded-spot-y", highlight.y);
+        imageLightboxStage.style.setProperty("--expanded-spot-w", highlight.w);
+        imageLightboxStage.style.setProperty("--expanded-spot-h", highlight.h);
+
+        const baseImage = new Image();
+        baseImage.className = "expanded-base";
+        baseImage.src = source;
+        baseImage.alt = "";
+
+        const clearImage = new Image();
+        clearImage.className = "expanded-clear";
+        clearImage.src = source;
+        clearImage.alt = altText;
+
+        const ring = document.createElement("span");
+        ring.className = "expanded-ring";
+        ring.setAttribute("aria-hidden", "true");
+
+        imageLightboxStage.append(baseImage, clearImage, ring);
+      };
+
+      const openImageLightbox = (container) => {
+        if (!imageLightbox || !imageLightboxStage || !imageLightboxTitle || !imageLightboxCaption) {
+          return;
+        }
+
+        const image = getExpandableImage(container);
+        if (!image?.currentSrc && !image?.src) {
+          return;
+        }
+
+        const altText = image.getAttribute("alt") || "Expanded product screenshot.";
+        imageLightboxTrigger = container;
+        buildExpandedImage(container, image, altText);
+        imageLightboxTitle.textContent = altText;
+        imageLightboxCaption.textContent = "Tap outside the image or press Escape to close.";
+        imageLightbox.hidden = false;
+        document.body.classList.add("has-image-lightbox");
+        imageLightboxClose?.focus();
+      };
+
+      expandableImages.forEach((container) => {
+        const image = getExpandableImage(container);
+        if (!image) {
+          return;
+        }
+
+        const altText = image.getAttribute("alt") || "product screenshot";
+        container.tabIndex = 0;
+        container.setAttribute("role", "button");
+        container.setAttribute("aria-label", `Expand ${altText}`);
+        container.addEventListener("click", () => openImageLightbox(container));
+        container.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openImageLightbox(container);
+          }
+        });
+      });
+
+      imageLightbox?.querySelectorAll("[data-lightbox-close]").forEach((control) => {
+        control.addEventListener("click", closeImageLightbox);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeImageLightbox();
+        }
+      });
     </script>
   </body>
 </html>
