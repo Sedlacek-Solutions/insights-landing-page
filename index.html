@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Insights for App Store Connect - Review workflows for Mac</title>
+    <title>Insights for App Store Connect - Reviews and acquisition for Mac</title>
     <meta
       name="description"
-      content="Insights for App Store Connect is a native Mac app for Review Chat, generated responses, translations, removal requests, metrics, and filters."
+      content="Insights for App Store Connect is a native Mac app for App Store review workflows, Acquisition Chat, impressions, product page views, downloads, conversion, filters, and metrics."
     >
     <meta name="theme-color" content="#000000">
     <meta property="og:title" content="Insights for App Store Connect">
     <meta
       property="og:description"
-      content="A native Mac workspace for understanding App Store reviews and responding faster."
+      content="A native Mac workspace for understanding App Store reviews, responding faster, and tracking how traffic turns into downloads."
     >
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/hero-mockup.png">
@@ -28,7 +28,7 @@
         "operatingSystem": "macOS",
         "url": "https://apps.apple.com/app/id6745999897",
         "image": "assets/hero-mockup.png",
-        "description": "A native Mac app for App Store Connect review workflows, Review Chat, assisted response drafting, translation, removal requests, metrics, and filters."
+        "description": "A native Mac app for App Store Connect review workflows, Review Chat, assisted response drafting, translation, removal requests, Acquisition Chat, impressions, product page views, downloads, conversion, metrics, and filters."
       }
     </script>
   </head>
@@ -43,69 +43,98 @@
           <summary>Solutions</summary>
           <div class="feature-menu" aria-label="Solutions">
             <div class="solution-menu-layout">
-              <nav class="solution-category-rail" aria-label="Solution categories">
-                <a class="solution-category-tab is-active" href="#feature-chat" aria-current="page">
-                  <span class="solution-category-tab-icon" aria-hidden="true">
-                    <img src="assets/star-bubble.svg" width="38" height="32" alt="">
-                  </span>
-                  <span>
-                    <strong>Reviews</strong>
-                  </span>
-                </a>
-              </nav>
-              <section class="solution-category" aria-labelledby="solution-reviews-title">
-                <h2 id="solution-reviews-title" class="visually-hidden">Reviews</h2>
-                <div class="solution-link-grid">
-                  <a class="solution-link" href="#feature-chat">
-                    <span class="solution-symbol" aria-hidden="true">
-                      <img src="assets/symbol-chat.png" width="34" height="27" alt="">
-                    </span>
-                    <span class="solution-link-copy">
-                      <strong>Chat</strong>
-                    </span>
-                  </a>
-                  <a class="solution-link" href="#feature-responses">
-                    <span class="solution-symbol" aria-hidden="true">
-                      <img src="assets/symbol-response.png" width="26" height="25" alt="">
-                    </span>
-                    <span class="solution-link-copy">
-                      <strong>Generated responses</strong>
-                    </span>
-                  </a>
-                  <a class="solution-link" href="#feature-translations">
-                    <span class="solution-symbol" aria-hidden="true">
-                      <img src="assets/symbol-translate.png" width="37" height="27" alt="">
-                    </span>
-                    <span class="solution-link-copy">
-                      <strong>Translations</strong>
-                    </span>
-                  </a>
-                  <a class="solution-link" href="#feature-filters">
-                    <span class="solution-symbol" aria-hidden="true">
-                      <img src="assets/symbol-filters.png" width="24" height="14" alt="">
-                    </span>
-                    <span class="solution-link-copy">
-                      <strong>Filters</strong>
-                    </span>
-                  </a>
-                  <a class="solution-link" href="#feature-metrics">
-                    <span class="solution-symbol" aria-hidden="true">
-                      <img src="assets/symbol-metrics.png" width="27" height="22" alt="">
-                    </span>
-                    <span class="solution-link-copy">
-                      <strong>Metrics</strong>
-                    </span>
-                  </a>
-                  <a class="solution-link" href="#feature-request-removal">
-                    <span class="solution-symbol" aria-hidden="true">
-                      <img src="assets/symbol-removal.png" width="26" height="25" alt="">
-                    </span>
-                    <span class="solution-link-copy">
-                      <strong>Request removal</strong>
-                    </span>
-                  </a>
-                </div>
-              </section>
+              <div class="solution-category-stack">
+                <section class="solution-category" aria-labelledby="solution-acquisition-title">
+                  <h2 id="solution-acquisition-title" class="solution-category-title">Acquisition</h2>
+                  <div class="solution-link-grid solution-link-grid-acquisition">
+                    <a class="solution-link" href="#feature-acquisition-chat">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-chat.png" width="34" height="27" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Chat</strong>
+                      </span>
+                    </a>
+                    <a class="solution-link" href="#feature-acquisition-funnel">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-funnel-metrics.svg" width="34" height="30" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Funnel metrics</strong>
+                      </span>
+                    </a>
+                    <a class="solution-link" href="#feature-acquisition-filters">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-filters.png" width="24" height="14" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Filters</strong>
+                      </span>
+                    </a>
+                    <a class="solution-link" href="#feature-acquisition-breakdowns">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-metrics.png" width="27" height="22" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Breakdowns</strong>
+                      </span>
+                    </a>
+                  </div>
+                </section>
+                <section class="solution-category" aria-labelledby="solution-reviews-title">
+                  <h2 id="solution-reviews-title" class="solution-category-title">Reviews</h2>
+                  <div class="solution-link-grid">
+                    <a class="solution-link" href="#feature-chat">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-chat.png" width="34" height="27" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Chat</strong>
+                      </span>
+                    </a>
+                    <a class="solution-link" href="#feature-responses">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-response.png" width="26" height="25" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Generated responses</strong>
+                      </span>
+                    </a>
+                    <a class="solution-link" href="#feature-translations">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-translate.png" width="37" height="27" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Translations</strong>
+                      </span>
+                    </a>
+                    <a class="solution-link" href="#feature-filters">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-filters.png" width="24" height="14" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Filters</strong>
+                      </span>
+                    </a>
+                    <a class="solution-link" href="#feature-metrics">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-metrics.png" width="27" height="22" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Metrics</strong>
+                      </span>
+                    </a>
+                    <a class="solution-link" href="#feature-request-removal">
+                      <span class="solution-symbol" aria-hidden="true">
+                        <img src="assets/symbol-removal.png" width="26" height="25" alt="">
+                      </span>
+                      <span class="solution-link-copy">
+                        <strong>Request removal</strong>
+                      </span>
+                    </a>
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
         </details>
@@ -155,76 +184,303 @@
         </section>
       </section>
 
-      <section id="review-features" class="review-feature-links" aria-labelledby="review-features-title">
-        <div class="review-feature-heading">
-          <p class="section-kicker">Reviews</p>
-          <h2 id="review-features-title">Review workflows, connected.</h2>
+      <section id="solutions" class="solution-feature-links" aria-labelledby="solutions-title">
+        <div class="solution-feature-heading">
+          <h2 id="solutions-title">Solutions</h2>
         </div>
-        <div class="review-feature-grid">
-          <a class="review-feature-card" href="#feature-chat">
-            <span class="sf-symbol" aria-hidden="true">
-              <img src="assets/symbol-chat.png" width="34" height="27" alt="">
-            </span>
-            <span>
-              <strong>Chat</strong>
-              <small>Ask questions across reviews, sentiment, and product requests.</small>
-            </span>
-          </a>
+        <div class="solution-feature-groups">
+          <section class="solution-feature-group" aria-labelledby="solution-feature-acquisition-title">
+            <h3 id="solution-feature-acquisition-title">Acquisition</h3>
+            <div class="solution-feature-grid solution-feature-grid-acquisition">
+              <a class="solution-feature-card" href="#feature-acquisition-chat">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-chat.png" width="34" height="27" alt="">
+                </span>
+                <span>
+                  <strong>Chat</strong>
+                  <small>Ask what changed across impressions, page views, downloads, and conversion.</small>
+                </span>
+              </a>
 
-          <a class="review-feature-card" href="#feature-responses">
-            <span class="sf-symbol" aria-hidden="true">
-              <img src="assets/symbol-response.png" width="26" height="25" alt="">
-            </span>
-            <span>
-              <strong>Generated responses</strong>
-              <small>Draft contextual replies with tone and length controls.</small>
-            </span>
-          </a>
+              <a class="solution-feature-card" href="#feature-acquisition-funnel">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-funnel-metrics.svg" width="34" height="30" alt="">
+                </span>
+                <span>
+                  <strong>Funnel metrics</strong>
+                  <small>Track how App Store traffic moves from impression to product page to download.</small>
+                </span>
+              </a>
 
-          <a class="review-feature-card" href="#feature-translations">
-            <span class="sf-symbol" aria-hidden="true">
-              <img src="assets/symbol-translate.png" width="37" height="27" alt="">
-            </span>
-            <span>
-              <strong>Translations</strong>
-              <small>Read international feedback and preview translated replies.</small>
-            </span>
-          </a>
+              <a class="solution-feature-card" href="#feature-acquisition-filters">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-filters.png" width="24" height="14" alt="">
+                </span>
+                <span>
+                  <strong>Filters</strong>
+                  <small>Filter by territory, device type, source type, and page type.</small>
+                </span>
+              </a>
 
-          <a class="review-feature-card" href="#feature-filters">
-            <span class="sf-symbol" aria-hidden="true">
-              <img src="assets/symbol-filters.png" width="24" height="14" alt="">
-            </span>
-            <span>
-              <strong>Filters</strong>
-              <small>Narrow reviews by version, territory, rating, and status.</small>
-            </span>
-          </a>
+              <a class="solution-feature-card" href="#feature-acquisition-breakdowns">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-metrics.png" width="27" height="22" alt="">
+                </span>
+                <span>
+                  <strong>Breakdowns</strong>
+                  <small>Find where acquisition is strongest by country, source, device, and page type.</small>
+                </span>
+              </a>
+            </div>
+          </section>
 
-          <a class="review-feature-card" href="#feature-metrics">
-            <span class="sf-symbol" aria-hidden="true">
-              <img src="assets/symbol-metrics.png" width="27" height="22" alt="">
-            </span>
-            <span>
-              <strong>Metrics</strong>
-              <small>Track rating patterns, review volume, and distribution.</small>
-            </span>
-          </a>
+          <section class="solution-feature-group" aria-labelledby="solution-feature-reviews-title">
+            <h3 id="solution-feature-reviews-title">Reviews</h3>
+            <div class="solution-feature-grid">
+              <a class="solution-feature-card" href="#feature-chat">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-chat.png" width="34" height="27" alt="">
+                </span>
+                <span>
+                  <strong>Chat</strong>
+                  <small>Ask questions across reviews, sentiment, and product requests.</small>
+                </span>
+              </a>
 
-          <a class="review-feature-card" href="#feature-request-removal">
-            <span class="sf-symbol" aria-hidden="true">
-              <img src="assets/symbol-removal.png" width="26" height="25" alt="">
-            </span>
-            <span>
-              <strong>Request removal</strong>
-              <small>Prepare Apple-facing moderation requests from a review.</small>
-            </span>
-          </a>
+              <a class="solution-feature-card" href="#feature-responses">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-response.png" width="26" height="25" alt="">
+                </span>
+                <span>
+                  <strong>Generated responses</strong>
+                  <small>Draft contextual replies with tone and length controls.</small>
+                </span>
+              </a>
+
+              <a class="solution-feature-card" href="#feature-translations">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-translate.png" width="37" height="27" alt="">
+                </span>
+                <span>
+                  <strong>Translations</strong>
+                  <small>Read international feedback and preview translated replies.</small>
+                </span>
+              </a>
+
+              <a class="solution-feature-card" href="#feature-filters">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-filters.png" width="24" height="14" alt="">
+                </span>
+                <span>
+                  <strong>Filters</strong>
+                  <small>Narrow reviews by version, territory, rating, and status.</small>
+                </span>
+              </a>
+
+              <a class="solution-feature-card" href="#feature-metrics">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-metrics.png" width="27" height="22" alt="">
+                </span>
+                <span>
+                  <strong>Metrics</strong>
+                  <small>Track rating patterns, review volume, and distribution.</small>
+                </span>
+              </a>
+
+              <a class="solution-feature-card" href="#feature-request-removal">
+                <span class="sf-symbol" aria-hidden="true">
+                  <img src="assets/symbol-removal.png" width="26" height="25" alt="">
+                </span>
+                <span>
+                  <strong>Request removal</strong>
+                  <small>Prepare Apple-facing moderation requests from a review.</small>
+                </span>
+              </a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="acquisition" class="feature-stack feature-stack-acquisition" aria-label="Acquisition feature highlights">
+        <div
+          class="feature-tour"
+          data-active-feature="acquisition-overview"
+          data-default-image="assets/feature-acquisition-funnel.png"
+          style="--media-aspect-ratio: 1536 / 883; --media-aspect-value: 1.7395243488;"
+        >
+          <div class="feature-steps" aria-label="Acquisition feature descriptions">
+            <article
+              class="feature-step feature-overview is-active"
+              data-feature="acquisition-overview"
+              data-spot-x="0%"
+              data-spot-y="0%"
+              data-spot-w="100%"
+              data-spot-h="100%"
+            >
+              <p class="section-kicker">Acquisition Workspace</p>
+              <h2>See how App Store traffic becomes downloads.</h2>
+              <p>
+                Pair reviews with acquisition analytics for impressions, product page views,
+                downloads, conversion, sources, territories, devices, and page types.
+              </p>
+              <figure class="feature-inline-media is-overview">
+                <img
+                  src="assets/feature-acquisition-funnel.png"
+                  width="1536"
+                  height="883"
+                  alt="Insights acquisition workspace with funnel metrics and filters."
+                >
+              </figure>
+            </article>
+
+            <article
+              id="feature-acquisition-chat"
+              class="feature-step"
+              data-feature="acquisition-chat"
+              data-spot-x="0.8%"
+              data-spot-y="1.2%"
+              data-spot-w="27%"
+              data-spot-h="97.5%"
+            >
+              <p class="section-kicker">Acquisition Chat</p>
+              <h3>Ask questions across the funnel.</h3>
+              <p>
+                Ask what changed most, which source converts, where users drop off, and which
+                territories or devices turn attention into downloads.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 0.8%; --inline-spot-y: 1.2%; --inline-spot-w: 27%; --inline-spot-h: 97.5%;"
+              >
+                <img class="inline-base" src="assets/feature-acquisition-funnel.png" width="1536" height="883" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-acquisition-funnel.png"
+                  width="1536"
+                  height="883"
+                  alt="Insights Acquisition Chat sidebar highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-acquisition-funnel"
+              class="feature-step"
+              data-feature="acquisition-funnel"
+              data-spot-x="26.6%"
+              data-spot-y="6%"
+              data-spot-w="48.3%"
+              data-spot-h="85.5%"
+            >
+              <p class="section-kicker">Funnel metrics</p>
+              <h3>Measure impressions, views, downloads, and conversion.</h3>
+              <p>
+                Follow the top-level acquisition path from App Store impression to product page
+                view to download, with conversion rates in the same workspace.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 26.6%; --inline-spot-y: 6%; --inline-spot-w: 48.3%; --inline-spot-h: 85.5%;"
+              >
+                <img class="inline-base" src="assets/feature-acquisition-funnel.png" width="1536" height="883" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-acquisition-funnel.png"
+                  width="1536"
+                  height="883"
+                  alt="Insights acquisition funnel metrics highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-acquisition-breakdowns"
+              class="feature-step"
+              data-feature="acquisition-breakdowns"
+              data-image="assets/feature-acquisition-breakdowns.png"
+              data-spot-x="27%"
+              data-spot-y="2.2%"
+              data-spot-w="47.5%"
+              data-spot-h="95.6%"
+            >
+              <p class="section-kicker">Breakdowns</p>
+              <h3>Compare sources, devices, and territories.</h3>
+              <p>
+                See where impressions come from, how device mix changes, and which territories
+                are strongest or weakest in one acquisition view.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 27%; --inline-spot-y: 2.2%; --inline-spot-w: 47.5%; --inline-spot-h: 95.6%;"
+              >
+                <img class="inline-base" src="assets/feature-acquisition-breakdowns.png" width="1536" height="883" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-acquisition-breakdowns.png"
+                  width="1536"
+                  height="883"
+                  alt="Insights acquisition source, device, and territory breakdowns highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-acquisition-filters"
+              class="feature-step"
+              data-feature="acquisition-filters"
+              data-spot-x="73.4%"
+              data-spot-y="1%"
+              data-spot-w="25.6%"
+              data-spot-h="97.5%"
+            >
+              <p class="section-kicker">Acquisition filters</p>
+              <h3>Slice acquisition by the dimensions App Store teams use.</h3>
+              <p>
+                Filter by territory, device type, source type, and page type, then use the same
+                context across charts and Acquisition Chat.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 73.4%; --inline-spot-y: 1%; --inline-spot-w: 25.6%; --inline-spot-h: 97.5%;"
+              >
+                <img class="inline-base" src="assets/feature-acquisition-funnel.png" width="1536" height="883" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-acquisition-funnel.png"
+                  width="1536"
+                  height="883"
+                  alt="Insights acquisition filters highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+          </div>
+
+          <figure class="tour-media">
+            <img
+              class="tour-base"
+              src="assets/feature-acquisition-funnel.png"
+              width="1536"
+              height="883"
+              alt=""
+            >
+            <img
+              class="tour-clear"
+              src="assets/feature-acquisition-funnel.png"
+              width="1536"
+              height="883"
+              alt="Insights acquisition workspace with an animated highlight."
+            >
+            <span class="tour-ring" aria-hidden="true"></span>
+          </figure>
         </div>
       </section>
 
       <section id="features" class="feature-stack" aria-label="Feature highlights">
-        <div class="feature-tour" data-active-feature="overview">
+        <div class="feature-tour" data-active-feature="overview" data-default-image="assets/feature-response-workflow.png">
           <div class="feature-steps" aria-label="Feature descriptions">
             <article
               class="feature-step feature-overview is-active"
@@ -234,7 +490,7 @@
               data-spot-w="100%"
               data-spot-h="100%"
             >
-              <p class="section-kicker">Workspace</p>
+              <p class="section-kicker">Reviews Workspace</p>
               <h2>The complete customer reviews workspace.</h2>
               <p>
                 See Chat, response drafting, translations, and filters in one focused
@@ -521,7 +777,7 @@
 
           <details class="faq-item">
             <summary>What is included in Pro?</summary>
-            <p>Pro includes 500 monthly intelligence credits for review chat, drafting, and translation workflows.</p>
+            <p>Pro includes 500 monthly intelligence credits for Review Chat, Acquisition Chat, drafting, and translation workflows.</p>
           </details>
 
           <details class="faq-item">
@@ -634,10 +890,12 @@
         control.addEventListener("blur", clearHeaderControlHover);
       });
 
+      let solutionsMenuPinnedOpen = false;
       const closeSolutionsMenu = () => {
         if (solutionsMenu) {
           solutionsMenu.open = false;
           solutionsMenu.classList.remove("is-open");
+          solutionsMenuPinnedOpen = false;
           updateHeaderMenuState();
           clearHeaderControlHover();
         }
@@ -648,13 +906,17 @@
         const solutionsMenuPanel = solutionsMenu.querySelector(".feature-menu");
         const canHoverSolutionsMenu = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
         let solutionsMenuCloseTimer;
-        const openSolutionsMenu = () => {
+        const openSolutionsMenu = (source = "pointer") => {
           window.clearTimeout(solutionsMenuCloseTimer);
           solutionsMenu.open = true;
           solutionsMenu.classList.add("is-open");
+          solutionsMenuPinnedOpen = source === "click";
           updateHeaderMenuState();
         };
         const scheduleSolutionsMenuClose = () => {
+          if (solutionsMenuPinnedOpen) {
+            return;
+          }
           window.clearTimeout(solutionsMenuCloseTimer);
           solutionsMenuCloseTimer = window.setTimeout(closeSolutionsMenu, 120);
         };
@@ -671,10 +933,10 @@
         }
         solutionsMenuTrigger?.addEventListener("click", (event) => {
           event.preventDefault();
-          if (solutionsMenu.classList.contains("is-open")) {
+          if (solutionsMenu.classList.contains("is-open") && solutionsMenuPinnedOpen) {
             closeSolutionsMenu();
           } else {
-            openSolutionsMenu();
+            openSolutionsMenu("click");
           }
         });
         solutionsMenu.addEventListener("focusout", () => {
@@ -864,12 +1126,15 @@
 
       fetchSocialProof().then(renderSocialProof);
 
-      const tour = document.querySelector(".feature-tour");
-      const steps = document.querySelectorAll(".feature-step");
-      const tourImages = document.querySelectorAll(".tour-media img");
-      const defaultTourImage = "assets/feature-response-workflow.png";
+      document.querySelectorAll(".feature-tour").forEach((tour) => {
+        const steps = tour.querySelectorAll(".feature-step");
+        const tourImages = tour.querySelectorAll(".tour-media img");
+        const defaultTourImage = tour.dataset.defaultImage || "assets/feature-response-workflow.png";
 
-      if (tour && steps.length > 0) {
+        if (steps.length === 0) {
+          return;
+        }
+
         const activateStep = (step) => {
           const imageSource = step.dataset.image || defaultTourImage;
           tour.dataset.activeFeature = step.dataset.feature;
@@ -908,7 +1173,7 @@
         );
 
         steps.forEach((step) => observer.observe(step));
-      }
+      });
 
       const imageLightbox = document.querySelector(".image-lightbox");
       const imageLightboxStage = imageLightbox?.querySelector(".image-lightbox-stage");
@@ -946,6 +1211,8 @@
           y: style.getPropertyValue("--spot-y") || style.getPropertyValue("--inline-spot-y") || "0%",
           w: style.getPropertyValue("--spot-w") || style.getPropertyValue("--inline-spot-w") || "100%",
           h: style.getPropertyValue("--spot-h") || style.getPropertyValue("--inline-spot-h") || "100%",
+          aspectRatio: style.getPropertyValue("--media-aspect-ratio") || "1275 / 755",
+          aspectValue: style.getPropertyValue("--media-aspect-value") || "1.6887417219",
         };
       };
 
@@ -959,8 +1226,11 @@
           container.querySelector(".tour-clear, .inline-clear") &&
             container.querySelector(".tour-ring, .inline-ring")
         );
+        const highlight = getHighlightVariables(container);
 
         imageLightboxStage.replaceChildren();
+        imageLightboxStage.style.setProperty("--expanded-aspect-ratio", highlight.aspectRatio);
+        imageLightboxStage.style.setProperty("--expanded-aspect-value", highlight.aspectValue);
 
         if (!hasHighlight) {
           const expandedImage = new Image();
@@ -970,7 +1240,6 @@
           return;
         }
 
-        const highlight = getHighlightVariables(container);
         imageLightboxStage.style.setProperty("--expanded-spot-x", highlight.x);
         imageLightboxStage.style.setProperty("--expanded-spot-y", highlight.y);
         imageLightboxStage.style.setProperty("--expanded-spot-w", highlight.w);
