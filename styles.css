@@ -862,6 +862,13 @@ h3 {
 
 .tour-clear {
   filter: saturate(1.08) brightness(1.12) contrast(1.04);
+  -webkit-clip-path: inset(
+    var(--spot-y)
+    calc(100% - var(--spot-x) - var(--spot-w))
+    calc(100% - var(--spot-y) - var(--spot-h))
+    var(--spot-x)
+    round 8px
+  );
   clip-path: inset(
     var(--spot-y)
     calc(100% - var(--spot-x) - var(--spot-w))
@@ -926,6 +933,13 @@ h3 {
 
 .inline-clear {
   filter: saturate(1.08) brightness(1.12) contrast(1.04);
+  -webkit-clip-path: inset(
+    var(--inline-spot-y)
+    calc(100% - var(--inline-spot-x) - var(--inline-spot-w))
+    calc(100% - var(--inline-spot-y) - var(--inline-spot-h))
+    var(--inline-spot-x)
+    round 8px
+  );
   clip-path: inset(
     var(--inline-spot-y)
     calc(100% - var(--inline-spot-x) - var(--inline-spot-w))
@@ -1036,9 +1050,10 @@ h3 {
   --expanded-spot-w: 100%;
   --expanded-spot-h: 100%;
   position: relative;
-  width: 100%;
+  width: min(100%, calc((100vh - 170px) * 1.6887417219));
   aspect-ratio: 1275 / 755;
   max-height: min(76vh, 920px);
+  margin-inline: auto;
   overflow: hidden;
   border-radius: 10px;
   background: #050505;
@@ -1059,6 +1074,13 @@ h3 {
 
 .image-lightbox-stage .expanded-clear {
   filter: saturate(1.08) brightness(1.12) contrast(1.04);
+  -webkit-clip-path: inset(
+    var(--expanded-spot-y)
+    calc(100% - var(--expanded-spot-x) - var(--expanded-spot-w))
+    calc(100% - var(--expanded-spot-y) - var(--expanded-spot-h))
+    var(--expanded-spot-x)
+    round 8px
+  );
   clip-path: inset(
     var(--expanded-spot-y)
     calc(100% - var(--expanded-spot-x) - var(--expanded-spot-w))
