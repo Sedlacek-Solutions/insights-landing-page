@@ -1508,6 +1508,17 @@ body.has-image-lightbox {
   }
 }
 
+@media (max-width: 900px) {
+  .solution-feature-grid,
+  .solution-feature-grid-acquisition {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-feature-card {
+    min-height: 0;
+  }
+}
+
 @media (max-width: 760px) {
   :root {
     --header-offset: 112px;
