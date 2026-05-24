@@ -382,19 +382,18 @@ img {
 }
 
 .header-cta {
-  min-height: 0;
-  padding: 4px;
-  border-radius: 12px;
-  background: transparent;
-  color: inherit;
-}
-
-.header-cta img {
-  width: 165px;
-  height: auto;
-  transition:
-    filter 160ms ease,
-    transform 160ms ease;
+  min-width: 118px;
+  min-height: 42px;
+  padding: 0 22px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 760;
+  box-shadow:
+    0 10px 24px rgba(9, 20, 58, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(140%);
 }
 
 .header-cta:hover,
@@ -405,14 +404,11 @@ img {
 
 .header-cta:hover,
 .header-cta:focus-visible {
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
-}
-
-.header-cta:hover img,
-.header-cta:focus-visible img {
-  filter: brightness(1.08);
-  transform: scale(1.015);
+  border-color: rgba(255, 255, 255, 0.36);
+  background: rgba(255, 255, 255, 0.26);
+  box-shadow:
+    0 14px 32px rgba(9, 20, 58, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
 .hero {
@@ -548,6 +544,55 @@ h3 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 14px;
+}
+
+.hero-store-actions {
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.store-badge-link,
+.store-badge-coming-soon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.store-badge-link {
+  min-height: 40px;
+  border-radius: 9px;
+  transition:
+    filter 160ms ease,
+    transform 160ms ease;
+}
+
+.store-badge-link:hover,
+.store-badge-link:focus-visible {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.store-badge-coming-soon {
+  flex-direction: column;
+  gap: 7px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.78rem;
+  font-weight: 680;
+  line-height: 1;
+}
+
+.store-badge {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.store-badge-mac {
+  width: 156px;
+}
+
+.store-badge-ios {
+  width: 120px;
 }
 
 .social-proof {
@@ -1636,6 +1681,10 @@ body.has-image-lightbox {
   .site-footer {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .hero-store-actions {
+    align-items: center;
   }
 
   .button {
