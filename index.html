@@ -38,20 +38,74 @@
         <img src="assets/app-icon.png" width="34" height="34" alt="">
         <span>Insights</span>
       </a>
-      <nav class="feature-nav" aria-label="Feature navigation">
-        <details>
-          <summary>Features</summary>
-          <div class="feature-menu">
-            <div class="feature-submenu">
-              <button class="feature-submenu-trigger" type="button" aria-haspopup="true">Reviews</button>
-              <div class="feature-submenu-panel" aria-label="Reviews features">
-                <a href="#feature-chat">Chat</a>
-                <a href="#feature-responses">Generated responses</a>
-                <a href="#feature-translations">Translations</a>
-                <a href="#feature-filters">Filters</a>
-                <a href="#feature-metrics">Metrics</a>
-                <a href="#feature-request-removal">Request removal</a>
-              </div>
+      <nav class="feature-nav" aria-label="Primary navigation">
+        <details class="solutions-menu">
+          <summary>Solutions</summary>
+          <div class="feature-menu" aria-label="Solutions">
+            <div class="solution-menu-layout">
+              <nav class="solution-category-rail" aria-label="Solution categories">
+                <a class="solution-category-tab is-active" href="#feature-chat" aria-current="page">
+                  <span class="solution-category-tab-icon" aria-hidden="true">
+                    <img src="assets/star-bubble.svg" width="38" height="32" alt="">
+                  </span>
+                  <span>
+                    <strong>Reviews</strong>
+                  </span>
+                </a>
+              </nav>
+              <section class="solution-category" aria-labelledby="solution-reviews-title">
+                <h2 id="solution-reviews-title" class="visually-hidden">Reviews</h2>
+                <div class="solution-link-grid">
+                  <a class="solution-link" href="#feature-chat">
+                    <span class="solution-symbol" aria-hidden="true">
+                      <img src="assets/symbol-chat.png" width="34" height="27" alt="">
+                    </span>
+                    <span class="solution-link-copy">
+                      <strong>Chat</strong>
+                    </span>
+                  </a>
+                  <a class="solution-link" href="#feature-responses">
+                    <span class="solution-symbol" aria-hidden="true">
+                      <img src="assets/symbol-response.png" width="26" height="25" alt="">
+                    </span>
+                    <span class="solution-link-copy">
+                      <strong>Generated responses</strong>
+                    </span>
+                  </a>
+                  <a class="solution-link" href="#feature-translations">
+                    <span class="solution-symbol" aria-hidden="true">
+                      <img src="assets/symbol-translate.png" width="37" height="27" alt="">
+                    </span>
+                    <span class="solution-link-copy">
+                      <strong>Translations</strong>
+                    </span>
+                  </a>
+                  <a class="solution-link" href="#feature-filters">
+                    <span class="solution-symbol" aria-hidden="true">
+                      <img src="assets/symbol-filters.png" width="24" height="14" alt="">
+                    </span>
+                    <span class="solution-link-copy">
+                      <strong>Filters</strong>
+                    </span>
+                  </a>
+                  <a class="solution-link" href="#feature-metrics">
+                    <span class="solution-symbol" aria-hidden="true">
+                      <img src="assets/symbol-metrics.png" width="27" height="22" alt="">
+                    </span>
+                    <span class="solution-link-copy">
+                      <strong>Metrics</strong>
+                    </span>
+                  </a>
+                  <a class="solution-link" href="#feature-request-removal">
+                    <span class="solution-symbol" aria-hidden="true">
+                      <img src="assets/symbol-removal.png" width="26" height="25" alt="">
+                    </span>
+                    <span class="solution-link-copy">
+                      <strong>Request removal</strong>
+                    </span>
+                  </a>
+                </div>
+              </section>
             </div>
           </div>
         </details>
@@ -79,7 +133,7 @@
           <a class="button primary" href="https://apps.apple.com/app/id6745999897">
             Download
           </a>
-          <a class="button secondary" href="#review-features">Explore Features</a>
+          <a class="button secondary" href="#review-features">Explore Solutions</a>
         </div>
         <section
           class="social-proof"
@@ -439,40 +493,43 @@
 
       <section id="faq" class="faq-section" aria-labelledby="faq-title">
         <div class="faq-heading">
-          <p class="section-kicker">FAQ</p>
-          <h2 id="faq-title">Common questions.</h2>
+          <h2 id="faq-title">FAQs</h2>
+          <p>
+            Answers to common questions about subscriptions, credits, credentials, and Apple
+            account management.
+          </p>
         </div>
 
         <div class="faq-list">
-          <article class="faq-item">
-            <h3>Where do I subscribe?</h3>
+          <details class="faq-item">
+            <summary>Where do I subscribe?</summary>
             <p>Subscriptions are managed through Apple inside the iOS and macOS apps.</p>
-          </article>
+          </details>
 
-          <article class="faq-item">
-            <h3>What is included in Free?</h3>
+          <details class="faq-item">
+            <summary>What is included in Free?</summary>
             <p>Free includes 50 monthly intelligence credits.</p>
-          </article>
+          </details>
 
-          <article class="faq-item">
-            <h3>What is included in Pro?</h3>
+          <details class="faq-item">
+            <summary>What is included in Pro?</summary>
             <p>Pro includes 500 monthly intelligence credits for review chat, drafting, and translation workflows.</p>
-          </article>
+          </details>
 
-          <article class="faq-item">
-            <h3>Do you store my App Store Connect credentials?</h3>
+          <details class="faq-item">
+            <summary>Do you store my App Store Connect credentials?</summary>
             <p>App Store Connect credentials are stored securely in the Keychain and used only to connect to App Store Connect.</p>
-          </article>
+          </details>
 
-          <article class="faq-item">
-            <h3>Is Insights affiliated with Apple?</h3>
+          <details class="faq-item">
+            <summary>Is Insights affiliated with Apple?</summary>
             <p>No. Insights uses Apple-provided APIs but is not affiliated with or endorsed by Apple.</p>
-          </article>
+          </details>
 
-          <article class="faq-item">
-            <h3>Can I cancel anytime?</h3>
+          <details class="faq-item">
+            <summary>Can I cancel anytime?</summary>
             <p>Yes. Subscriptions are managed through your Apple account.</p>
-          </article>
+          </details>
         </div>
       </section>
 
@@ -527,12 +584,92 @@
     </script>
     <script>
       const siteHeader = document.querySelector(".site-header");
+      const solutionsMenu = document.querySelector(".solutions-menu");
       const updateHeaderBackground = () => {
         siteHeader?.classList.toggle("is-scrolled", window.scrollY > 12);
+      };
+      const updateHeaderMenuState = () => {
+        siteHeader?.classList.toggle("has-open-menu", Boolean(solutionsMenu?.classList.contains("is-open")));
       };
 
       updateHeaderBackground();
       window.addEventListener("scroll", updateHeaderBackground, { passive: true });
+
+      const headerControls = document.querySelectorAll(
+        ".site-header .brand, .site-header summary, .site-header .nav-link, .site-header .header-cta"
+      );
+      const clearHeaderControlHover = () => {
+        siteHeader?.classList.remove("is-control-hovered");
+      };
+      const setHeaderControlHover = () => {
+        siteHeader?.classList.add("is-control-hovered");
+      };
+
+      headerControls.forEach((control) => {
+        control.addEventListener("pointerenter", setHeaderControlHover);
+        control.addEventListener("pointerleave", clearHeaderControlHover);
+        control.addEventListener("focus", setHeaderControlHover);
+        control.addEventListener("blur", clearHeaderControlHover);
+      });
+
+      const closeSolutionsMenu = () => {
+        if (solutionsMenu) {
+          solutionsMenu.open = false;
+          solutionsMenu.classList.remove("is-open");
+          updateHeaderMenuState();
+          clearHeaderControlHover();
+        }
+      };
+
+      if (solutionsMenu) {
+        const solutionsMenuTrigger = solutionsMenu.querySelector("summary");
+        const solutionsMenuPanel = solutionsMenu.querySelector(".feature-menu");
+        let solutionsMenuCloseTimer;
+        const openSolutionsMenu = () => {
+          window.clearTimeout(solutionsMenuCloseTimer);
+          solutionsMenu.open = true;
+          solutionsMenu.classList.add("is-open");
+          updateHeaderMenuState();
+        };
+        const scheduleSolutionsMenuClose = () => {
+          window.clearTimeout(solutionsMenuCloseTimer);
+          solutionsMenuCloseTimer = window.setTimeout(closeSolutionsMenu, 120);
+        };
+
+        solutionsMenu.addEventListener("pointerenter", openSolutionsMenu);
+        solutionsMenu.addEventListener("pointerleave", scheduleSolutionsMenuClose);
+        solutionsMenu.addEventListener("mouseenter", openSolutionsMenu);
+        solutionsMenu.addEventListener("mouseleave", scheduleSolutionsMenuClose);
+        solutionsMenuTrigger?.addEventListener("pointerover", openSolutionsMenu);
+        solutionsMenuTrigger?.addEventListener("mouseover", openSolutionsMenu);
+        solutionsMenuTrigger?.addEventListener("click", (event) => {
+          event.preventDefault();
+          if (solutionsMenu.classList.contains("is-open")) {
+            closeSolutionsMenu();
+          } else {
+            openSolutionsMenu();
+          }
+        });
+        solutionsMenuPanel?.addEventListener("pointerenter", openSolutionsMenu);
+        solutionsMenuPanel?.addEventListener("mouseenter", openSolutionsMenu);
+        solutionsMenu.addEventListener("focusin", openSolutionsMenu);
+        solutionsMenu.addEventListener("focusout", () => {
+          window.setTimeout(() => {
+            if (!solutionsMenu.contains(document.activeElement)) {
+              closeSolutionsMenu();
+            }
+          }, 0);
+        });
+        solutionsMenu.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeSolutionsMenu();
+          }
+        });
+        solutionsMenu.querySelectorAll(".solution-link").forEach((link) => {
+          link.addEventListener("click", closeSolutionsMenu);
+        });
+        updateHeaderMenuState();
+      }
 
       const socialProofRoot = document.querySelector("[data-social-proof]");
       const socialProofCopy = socialProofRoot?.querySelector("[data-social-proof-copy]");
