@@ -10,7 +10,7 @@ Understand App Store reviews, ask revenue and acquisition questions, draft repli
 
 ## Description
 
-Insights for App Store Connect is a Mac-first workspace for developers and app teams who manage App Store customer reviews, ratings, responses, revenue, and acquisition analytics.
+Insights for Apps is a Mac-first workspace for developers and app teams who manage App Store customer reviews, ratings, responses, revenue, and acquisition analytics.
 
 Bring your review, revenue, and acquisition workflow into one focused place. Ask Review Chat what users love, where complaints keep coming up, how sentiment is changing, and which product requests are showing up across your feedback.
 
@@ -20,7 +20,7 @@ Use Revenue Chat to ask about proceeds, sales, purchases, paying users, and reve
 
 Use AI-assisted workflows to draft contextual responses from the selected review, adjust tone and length, preview translations, and prepare Apple-facing removal requests when a review needs moderation. You stay in control of what gets sent.
 
-Insights for App Store Connect helps you:
+Insights for Apps helps you:
 
 - Chat across customer reviews, sentiment, complaints, and feature requests
 - Ask Revenue Chat questions across proceeds, sales, purchases, paying users, and revenue mix
@@ -34,9 +34,9 @@ Insights for App Store Connect helps you:
 - Prepare concise removal-request drafts for reviews that need escalation
 - Keep App Store Connect review, revenue, and acquisition work organized in a native Mac workspace
 
-Insights for App Store Connect starts free, with optional Pro upgrades available in the app for more monthly intelligence credits.
+Insights for Apps starts free, with optional Pro upgrades available in the app for more monthly intelligence credits.
 
-App Store Connect credentials are stored securely in Keychain and used only to connect to App Store Connect. Insights for App Store Connect uses Apple-provided APIs but is not affiliated with or endorsed by Apple.
+App Store Connect credentials are stored securely in Keychain and used only to connect to App Store Connect. Insights for Apps uses Apple-provided APIs but is not affiliated with or endorsed by Apple.
 
 Manage your App Store reviews, revenue, and acquisition from one focused Mac workspace.
 
@@ -46,7 +46,7 @@ reviews,ratings,revenue,acquisition,downloads,analytics,translation,feedback,app
 
 ## What's New
 
-Introducing Insights for App Store Connect: a Mac workspace for App Store review workflows, revenue insights, and acquisition insights, including Review Chat, Revenue Chat, Acquisition Chat, generated responses, translations, filters, revenue metrics, conversion metrics, and removal-request drafting.
+Introducing Insights for Apps: a Mac workspace for App Store review workflows, revenue insights, and acquisition insights, including Review Chat, Revenue Chat, Acquisition Chat, generated responses, translations, filters, revenue metrics, conversion metrics, and removal-request drafting.
 
 ## Notes
 
