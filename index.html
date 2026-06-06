@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Insights for Apps - Reviews, revenue, and acquisition for Mac</title>
+    <title>Insights for Apps - Reviews, revenue, acquisition, and subscriptions for Mac</title>
     <meta
       name="description"
-      content="Insights for Apps is a native Mac app for App Store review, revenue, and acquisition workflows with AI chat, metrics, filters, and response tools."
+      content="Insights for Apps is a native Mac app for App Store review, revenue, acquisition, and subscription workflows with AI chat, metrics, filters, and response tools."
     >
     <meta name="theme-color" content="#000000">
     <meta property="og:title" content="Insights for Apps">
     <meta
       property="og:description"
-      content="A native Mac workspace for understanding App Store reviews, responding faster, and tracking revenue, purchases, and acquisition."
+      content="A native Mac workspace for understanding App Store reviews, responding faster, and tracking revenue, purchases, acquisition, and subscriptions."
     >
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/hero-macbook-pro-14.png">
@@ -28,7 +28,7 @@
         "operatingSystem": "macOS",
         "url": "https://apps.apple.com/app/id6745999897",
         "image": "assets/hero-macbook-pro-14.png",
-        "description": "A native Mac app for App Store Connect review, revenue, and acquisition workflows with AI chat, assisted response drafting, translation, metrics, and filters."
+        "description": "A native Mac app for App Store Connect review, revenue, acquisition, and subscription workflows with AI chat, assisted response drafting, translation, metrics, and filters."
       }
     </script>
   </head>
@@ -59,6 +59,15 @@
               <span class="workflow-menu-copy">
                 <strong>Revenue</strong>
                 <small>Know what is driving revenue.</small>
+              </span>
+            </a>
+            <a class="workflow-menu-link" href="#subscriptions">
+              <span class="workflow-symbol" aria-hidden="true">
+                <img src="assets/symbol-subscriptions.svg" width="34" height="34" alt="">
+              </span>
+              <span class="workflow-menu-copy">
+                <strong>Subscriptions</strong>
+                <small>Understand subscriber movement.</small>
               </span>
             </a>
             <a class="workflow-menu-link" href="#features">
@@ -175,6 +184,13 @@
             <strong>Find growth levers</strong>
             <small>Connect acquisition, revenue, and engagement signals.</small>
           </a>
+          <a class="question-card" href="#feature-subscriptions-metrics">
+            <span class="use-case-symbol" aria-hidden="true">
+              <img src="assets/symbol-subscriptions.svg" width="28" height="28" alt="">
+            </span>
+            <strong>Track subscriber health</strong>
+            <small>See active subscriptions, trials, churn, recovery, and at-risk movement.</small>
+          </a>
           <a class="question-card" href="#feature-responses">
             <span class="use-case-symbol" aria-hidden="true">
               <img src="assets/symbol-arrowshape-turn-up-left-circle.svg" width="28" height="28" alt="">
@@ -187,7 +203,7 @@
               <img src="assets/symbol-lightbulb.svg" width="28" height="28" alt="">
             </span>
             <strong>Spot product requests</strong>
-            <small>Turn recurring feedback into clearer product direction.</small>
+            <small>Turn recurring feedback into GitHub issue candidates.</small>
           </a>
           <a class="question-card" href="#feature-acquisition-breakdowns">
             <span class="use-case-symbol" aria-hidden="true">
@@ -195,6 +211,13 @@
             </span>
             <strong>Compare momentum</strong>
             <small>Find where sources, territories, and segments are strongest.</small>
+          </a>
+          <a class="question-card" href="#feature-subscriptions-breakdowns">
+            <span class="use-case-symbol" aria-hidden="true">
+              <img src="assets/symbol-dollar-circle.svg" width="28" height="28" alt="">
+            </span>
+            <strong>Compare subscription mix</strong>
+            <small>Break down subscribers by plan, territory, duration, offer, and device.</small>
           </a>
           <a class="question-card" href="#feature-metrics">
             <span class="use-case-symbol" aria-hidden="true">
@@ -562,6 +585,184 @@
         </div>
       </section>
 
+      <section id="subscriptions" class="feature-stack feature-stack-subscriptions" aria-label="Subscriptions feature highlights">
+        <div
+          class="feature-tour"
+          data-active-feature="subscriptions-overview"
+          data-default-image="assets/feature-subscriptions-overview.png?v=3"
+          style="--media-aspect-ratio: 2708 / 1564; --media-aspect-value: 1.7314578005;"
+        >
+          <div class="feature-steps" aria-label="Subscriptions feature descriptions">
+            <article
+              class="feature-step feature-overview is-active"
+              data-feature="subscriptions-overview"
+              data-spot-x="0%"
+              data-spot-y="0%"
+              data-spot-w="100%"
+              data-spot-h="100%"
+            >
+              <p class="section-kicker">Understand subscribers</p>
+              <h2>See subscriber movement without leaving your workspace.</h2>
+              <p>
+                Track active subscriptions, trials, churn, recoveries, subscribers, and proceeds
+                with the same focused App Store context as your other analytics.
+              </p>
+              <figure class="feature-inline-media is-overview">
+                <img
+                  src="assets/feature-subscriptions-overview.png?v=3"
+                  width="2708"
+                  height="1564"
+                  alt="Insights subscriptions workspace with subscription metrics, chat, and filters."
+                >
+              </figure>
+            </article>
+
+            <article
+              id="feature-subscriptions-chat"
+              class="feature-step"
+              data-feature="subscriptions-chat"
+              data-spot-x="3.7%"
+              data-spot-y="0.8%"
+              data-spot-w="27.8%"
+              data-spot-h="98.4%"
+            >
+              <p class="section-kicker">Subscription Chat</p>
+              <h3>Ask what changed in your subscriber base.</h3>
+              <p>
+                Ask about churn and recovery patterns, trial conversion, territory mix, and the
+                subscription or device segments contributing most to proceeds.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 3.7%; --inline-spot-y: 0.8%; --inline-spot-w: 27.8%; --inline-spot-h: 98.4%;"
+              >
+                <img class="inline-base" src="assets/feature-subscriptions-overview.png?v=3" width="2708" height="1564" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-subscriptions-overview.png?v=3"
+                  width="2708"
+                  height="1564"
+                  alt="Insights Subscription Chat sidebar highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-subscriptions-metrics"
+              class="feature-step"
+              data-feature="subscriptions-metrics"
+              data-spot-x="31%"
+              data-spot-y="7.2%"
+              data-spot-w="39.8%"
+              data-spot-h="91.6%"
+            >
+              <p class="section-kicker">Subscription metrics</p>
+              <h3>Watch active subscriptions, trials, and risk together.</h3>
+              <p>
+                Follow the trend cards that matter for subscriber health, including active
+                subscriptions, active trials, churn, recoveries, subscribers, and proceeds.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 31%; --inline-spot-y: 7.2%; --inline-spot-w: 39.8%; --inline-spot-h: 91.6%;"
+              >
+                <img class="inline-base" src="assets/feature-subscriptions-overview.png?v=3" width="2708" height="1564" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-subscriptions-overview.png?v=3"
+                  width="2708"
+                  height="1564"
+                  alt="Insights subscription trend cards highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-subscriptions-breakdowns"
+              class="feature-step"
+              data-feature="subscriptions-breakdowns"
+              data-image="assets/feature-subscriptions-breakdowns.png?v=3"
+              data-spot-x="31%"
+              data-spot-y="0%"
+              data-spot-w="39.8%"
+              data-spot-h="100%"
+            >
+              <p class="section-kicker">Breakdowns</p>
+              <h3>Compare plans, territories, durations, offers, and devices.</h3>
+              <p>
+                See which subscriptions dominate the active base, which territories are strongest,
+                and how durations, offers, and devices shape the mix.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 31%; --inline-spot-y: 0%; --inline-spot-w: 39.8%; --inline-spot-h: 100%;"
+              >
+                <img class="inline-base" src="assets/feature-subscriptions-breakdowns.png?v=3" width="2708" height="1564" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-subscriptions-breakdowns.png?v=3"
+                  width="2708"
+                  height="1564"
+                  alt="Insights subscription breakdowns highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-subscriptions-filters"
+              class="feature-step"
+              data-feature="subscriptions-filters"
+              data-spot-x="71%"
+              data-spot-y="0.8%"
+              data-spot-w="27.2%"
+              data-spot-h="98.4%"
+            >
+              <p class="section-kicker">Subscription filters</p>
+              <h3>Filter subscriptions by the dimensions that explain movement.</h3>
+              <p>
+                Narrow the view by territory, subscription, duration, and device, then carry that
+                same context into charts, breakdowns, and Subscription Chat.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 71%; --inline-spot-y: 0.8%; --inline-spot-w: 27.2%; --inline-spot-h: 98.4%;"
+              >
+                <img class="inline-base" src="assets/feature-subscriptions-overview.png?v=3" width="2708" height="1564" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-subscriptions-overview.png?v=3"
+                  width="2708"
+                  height="1564"
+                  alt="Insights subscription filters highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+          </div>
+
+          <figure class="tour-media">
+            <img
+              class="tour-base"
+              src="assets/feature-subscriptions-overview.png?v=3"
+              width="2708"
+              height="1564"
+              alt=""
+            >
+            <img
+              class="tour-clear"
+              src="assets/feature-subscriptions-overview.png?v=3"
+              width="2708"
+              height="1564"
+              alt="Insights subscriptions workspace with an animated highlight."
+            >
+            <span class="tour-ring" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </section>
+
       <section id="features" class="feature-stack" aria-label="Feature highlights">
         <div class="feature-tour" data-active-feature="overview" data-default-image="assets/feature-response-workflow.png">
           <div class="feature-steps" aria-label="Feature descriptions">
@@ -615,6 +816,37 @@
                   width="1275"
                   height="755"
                   alt="Insights Review Chat sidebar highlighted."
+                >
+                <span class="inline-ring" aria-hidden="true"></span>
+              </figure>
+            </article>
+
+            <article
+              id="feature-github-issues"
+              class="feature-step"
+              data-feature="github-issues"
+              data-spot-x="0.4%"
+              data-spot-y="0%"
+              data-spot-w="28.4%"
+              data-spot-h="100%"
+            >
+              <p class="section-kicker">GitHub</p>
+              <h3>Create issues from recurring review themes.</h3>
+              <p>
+                When a repository is connected, Review Chat can turn repeated complaints and
+                feature requests into GitHub issue candidates for you to review and create.
+              </p>
+              <figure
+                class="feature-inline-media"
+                style="--inline-spot-x: 0.4%; --inline-spot-y: 0%; --inline-spot-w: 28.4%; --inline-spot-h: 100%;"
+              >
+                <img class="inline-base" src="assets/feature-response-workflow.png" width="1275" height="755" alt="">
+                <img
+                  class="inline-clear"
+                  src="assets/feature-response-workflow.png"
+                  width="1275"
+                  height="755"
+                  alt="Insights Review Chat GitHub issue discovery workflow highlighted."
                 >
                 <span class="inline-ring" aria-hidden="true"></span>
               </figure>

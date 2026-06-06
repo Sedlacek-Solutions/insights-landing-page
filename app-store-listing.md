@@ -23,6 +23,7 @@ Use AI-assisted workflows to draft contextual responses from the selected review
 Insights for Apps helps you:
 
 - Chat across customer reviews, sentiment, complaints, and feature requests
+- Create GitHub issue candidates from recurring review complaints and feature requests
 - Ask Revenue Chat questions across proceeds, sales, purchases, paying users, and revenue mix
 - Ask Acquisition Chat questions across impressions, product page views, downloads, and conversion
 - Generate review responses with context from the selected review

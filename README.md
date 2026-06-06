@@ -19,5 +19,7 @@ Open `index.html` in a browser. There is no framework, package manager, build st
 - Acquisition breakdown screenshot: `assets/feature-acquisition-breakdowns.png`
 - Revenue overview screenshot: `assets/feature-revenue-overview.png`
 - Revenue breakdown screenshot: `assets/feature-revenue-breakdowns.png`
+- Subscriptions overview screenshot: `assets/feature-subscriptions-overview.png`
+- Subscriptions breakdown screenshot: `assets/feature-subscriptions-breakdowns.png`
 - Social proof uses the same `https://insightsserver-s89wk.ondigitalocean.app/v1/social-proof` endpoint as the app auth screen. The page includes an embedded snapshot fallback because the live endpoint currently needs CORS headers or a same-origin proxy before browser fetches can read it from a separate static host.
 - The feature sections use sticky screenshot areas with animated CSS spotlight crops as each text step scrolls into focus. Steps can swap screenshots via `data-image`, and each `.feature-tour` sets its own `data-default-image`. Adjust `data-spot-x`, `data-spot-y`, `data-spot-w`, and `data-spot-h` on each `.feature-step` in `index.html` if a highlight needs to move.
