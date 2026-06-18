@@ -1,6 +1,6 @@
 # Insights for Apps Landing Page
 
-Static MVP landing page for the Insights for Apps macOS app.
+Static MVP landing page for the Insights for Apps iOS, iPadOS, and macOS app.
 
 ## Preview
 

@@ -332,11 +332,6 @@ img {
   color: #ffffff;
 }
 
-.download-menu-link.is-disabled {
-  cursor: default;
-  opacity: 0.62;
-}
-
 .download-symbol {
   display: grid;
   place-items: center;
@@ -587,8 +582,7 @@ h3 {
   gap: 16px;
 }
 
-.store-badge-link,
-.store-badge-coming-soon {
+.store-badge-link {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -606,15 +600,6 @@ h3 {
 .store-badge-link:focus-visible {
   filter: brightness(1.08);
   transform: translateY(-1px);
-}
-
-.store-badge-coming-soon {
-  flex-direction: column;
-  gap: 7px;
-  color: rgba(255, 255, 255, 0.74);
-  font-size: 0.78rem;
-  font-weight: 680;
-  line-height: 1;
 }
 
 .store-badge {

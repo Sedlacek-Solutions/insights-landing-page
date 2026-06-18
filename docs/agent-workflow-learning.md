@@ -15,6 +15,10 @@ Inspect this repository independently from other projects.
 - pull requests, issues, and review comments when available
 - local docs, `AGENTS.md`, `README.md`, page files, assets, and publishing notes
 
+## Audit Hygiene
+
+- When summarizing repo history, compute commit totals with `git rev-list --count --first-parent HEAD` or an equivalent command instead of hand-counting log entries.
+
 ## Finding Types
 
 Classify every candidate as one of these actions.
