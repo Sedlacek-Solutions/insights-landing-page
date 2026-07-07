@@ -11,6 +11,7 @@ Open `index.html` in a browser. There is no framework, package manager, build st
 - Primary CTA: `https://apps.apple.com/app/id6745999897`
 - App Store listing copy: `app-store-listing.md`
 - App icon asset: `assets/app-icon.png`
+- Social preview image: `assets/social-preview.png`
 - Hero acquisition analytics screenshot: `assets/hero-acquisition-analytics.png`
 - Sales analytics feature screenshot: `assets/feature-sales-analytics.png`
 - Subscription analytics feature screenshot: `assets/feature-subscription-analytics.png`
