@@ -11,15 +11,9 @@ Open `index.html` in a browser. There is no framework, package manager, build st
 - Primary CTA: `https://apps.apple.com/app/id6745999897`
 - App Store listing copy: `app-store-listing.md`
 - App icon asset: `assets/app-icon.png`
-- Hero mockup asset: `assets/hero-mockup.png`
-- Feature screenshot: `assets/feature-response-workflow.png`
-- Metrics feature screenshot: `assets/feature-workspace-metrics.png`
-- Request removal feature screenshot: `assets/feature-workspace-request-removal.png`
-- Acquisition funnel screenshot: `assets/feature-acquisition-funnel.png`
-- Acquisition breakdown screenshot: `assets/feature-acquisition-breakdowns.png`
-- Revenue overview screenshot: `assets/feature-revenue-overview.png`
-- Revenue breakdown screenshot: `assets/feature-revenue-breakdowns.png`
-- Subscriptions overview screenshot: `assets/feature-subscriptions-overview.png`
-- Subscriptions breakdown screenshot: `assets/feature-subscriptions-breakdowns.png`
+- Hero acquisition analytics screenshot: `assets/hero-acquisition-analytics.png`
+- Sales analytics feature screenshot: `assets/feature-sales-analytics.png`
+- Subscription analytics feature screenshot: `assets/feature-subscription-analytics.png`
+- Reviews feature screenshot: `assets/feature-reviews.png`
 - Social proof uses the same `https://insightsserver-s89wk.ondigitalocean.app/v1/social-proof` endpoint as the app auth screen. The page includes an embedded snapshot fallback because the live endpoint currently needs CORS headers or a same-origin proxy before browser fetches can read it from a separate static host.
-- The feature sections use sticky screenshot areas with animated CSS spotlight crops as each text step scrolls into focus. Steps can swap screenshots via `data-image`, and each `.feature-tour` sets its own `data-default-image`. Adjust `data-spot-x`, `data-spot-y`, `data-spot-w`, and `data-spot-h` on each `.feature-step` in `index.html` if a highlight needs to move.
+- The landing page is organized around the app sidebar taxonomy: Growth & Marketing, Monetization, and Trust & Safety. Each taxonomy section uses a static real product screenshot and can be expanded in the page lightbox.
